@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 
 
@@ -13,7 +16,11 @@ import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule } fr
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatButtonModule
-  ]
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule
+  ],
+  providers: [AuthService, ToastrService]
 })
 export class AuthModule { }

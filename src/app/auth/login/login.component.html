@@ -1,18 +1,25 @@
-<p>Hola</p>
-Chao
 <div id="login-div" class="content-centered">
-    <div id="user-div" class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>Email or username</mat-label>
-            <input matInput placeholder="">
-        </mat-form-field>
-    </div>
-    <div id="pass-div" class="row">
-        <mat-form-field>
-            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-        </mat-form-field>
-    </div>
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <h1 class="display-2 py-5">Log in</h1>
+        <div id="user-div" class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email or username</mat-label>
+                <input matInput placeholder="" formControlName="username">
+            </mat-form-field>
+        </div>
+        <div id="pass-div" class="row">
+            <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div id="pass-div" class="row mt-3 mb-5">
+            <button mat-button type="submit" [disabled]="form.invalid">Log in</button>
+        </div>
+        <a>Forgot email?</a>
+    </form>
 </div>

@@ -1,10 +1,10 @@
 /* Border */
 .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: #0275d8;
+    color: indigo;
   }
 
   .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: white;
+    color: indigo;
 }
 
 .content-centered{
@@ -30,4 +30,8 @@
 
 .mat-form-field.mat-form-field{
     width: 300px;
+}
+
+.mat-button{
+    font-size: large;
 }
