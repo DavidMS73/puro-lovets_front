@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { BookListComponent} from './book/book-list/book-list.component'
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       path: 'home',
       //component: HomeComponent
       redirectTo: 'auth'
+  },
+  {
+    path: 'libros',
+    component: BookListComponent
   },
   {
       path: '',
