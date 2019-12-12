@@ -24,7 +24,7 @@ export class AuthService {
     }
 
     getUsuarioDetailByUser(username): Observable<UsuarioDetail> {
-      return this.http.get<UsuarioDetail>(API_URL + usuarios + '/user/' + username);
+      return this.http.get<UsuarioDetail>(API_URL + usuarios + '/username/' + username);
     }
 
     deleteUsuario(usuarioId): Observable<Usuario> {
