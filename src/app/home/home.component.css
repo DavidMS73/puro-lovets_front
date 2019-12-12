@@ -8,6 +8,10 @@
     color: #121a2f!important;
 }
 
+body{
+    background-color: #000000;
+}
+
 #txt{
     font-size: 75px;
     font-weight: 900;
@@ -52,3 +56,16 @@ z-index:10;
   transform: translateY(-50%);
     width: 30%;
  }
+ #btnLibros {
+     z-index: 1006;
+     height: 5%;
+     width: auto;
+     position: absolute;
+     color: white;
+     font-size: large;
+     bottom: 10%;
+ }
+ #btnLibros /deep/ .mat-button-focus-overlay {
+    background-color: gray;
+    opacity: 0.2;
+}
