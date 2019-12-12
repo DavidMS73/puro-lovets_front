@@ -4,7 +4,7 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-body { padding-top: 60px; }
+body { padding-top: 50px; }
 
 /* position */
 .toast-center-center {

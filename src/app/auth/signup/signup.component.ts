@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { Usuario } from '../usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private authService: AuthService, private toastr: ToastrService, private formBuilder: FormBuilder) {
+  constructor(private authService: AuthService, private toastr: ToastrService, private formBuilder: FormBuilder, private router: Router) {
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -53,6 +54,7 @@ export class SignupComponent implements OnInit {
       };
       this.authService.createUsuario(user).subscribe( o => {
         this.showSuccess();
+        this.router.navigate(['/home']);
       }, error => this.toastr.warning('El registro no se logra hacer', 'Registro de usuario'));
     }
   }
