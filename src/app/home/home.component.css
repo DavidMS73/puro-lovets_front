@@ -3,4 +3,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+},
+.text--blue {
+    color: #121a2f!important;
+}
+
+#txt{
+    font-size: 75px;
+    font-weight: 900;
 }
