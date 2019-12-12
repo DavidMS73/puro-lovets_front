@@ -17,17 +17,19 @@
                 </div>
             </div>
             <div class="col" style="display: flex; flex-wrap: wrap;">
-                <div *ngFor="let book of filteredBooks; trackBy: trackId" class="card" style="width: 20%; margin: 2%;">
-                    <a href="libros/{{book.id}}"><img src="{{book.image}}" class="card-img-top" alt="..."></a>
-                    <div class="card-body text-center">
-                        <p class="card-title font-weight-bold">{{book.name}}</p>
-                        <p class="card-text">${{book.precio}} COP</p>
-                        <p class="card-text">{{book.descuento}}%</p>
-                        <div class="card-footer align-text-bottom">
-                            <p class="btn btn-info align-text-bottom"><mat-icon>add_shopping_cart</mat-icon></p>
+                <div class="card-deck">
+                    <div *ngFor="let book of filteredBooks; trackBy: trackId" class="card" style="width: 20%; margin: 2%;">
+                        <a href="libros/{{book.id}}"><img src="{{book.image}}" class="card-img-top" alt="..."></a>
+                        <div class="card-body text-center">
+                            <p class="card-title font-weight-bold">{{book.name}}</p>
+                            <p class="card-text">${{book.precio}} COP</p>
+                            <p class="card-text text-danger">{{book.descuento}}%</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <p class="btn btn-info"><mat-icon>add_shopping_cart</mat-icon></p>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </div>
