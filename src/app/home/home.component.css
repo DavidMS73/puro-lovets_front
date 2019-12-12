@@ -12,3 +12,42 @@
     font-size: 75px;
     font-weight: 900;
 }
+
+
+ /*#imgcontainer
+{
+opacity:0.1;
+background-color: Black;
+z-index:10;
+}*/
+#banner
+{
+    height: 720px;
+      Z-index: 5;
+}
+
+#imgcontainer {
+    width: 100%;
+    position: relative;
+ }
+ #opacitor {
+     height: 100%;
+     width: 100%;
+     opacity: 0.4;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    background-color: black;
+ }
+ #logo {
+     z-index: 1005;
+     float: left;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+ }

@@ -8,7 +8,9 @@ import { AuthModule } from './auth/auth.module';
 import {BookModule} from './book/book.module';
 import { HomeComponent } from './home/home.component';
 import {MatCarouselModule} from '@ngmodule/material-carousel'
+
 import { BookList2Component } from './book/book-list2/book-list2.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,12 @@ import { BookList2Component } from './book/book-list2/book-list2.component';
     BrowserAnimationsModule,
     AuthModule,
     BookModule,
-    MatCarouselModule
+    MatCarouselModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
