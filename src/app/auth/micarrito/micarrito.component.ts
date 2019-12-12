@@ -24,6 +24,10 @@ export class MicarritoComponent implements OnInit {
         this.toastr.success('Pago', 'Se procederá a su pago', { progressBar: true, timeOut: 3000 });
     }
 
+    showCancel() {
+        this.toastr.warning('Pago', 'Se canceló la compra', { progressBar: true, timeOut: 3000 });
+    }
+
     ngOnInit() {
     }
 
