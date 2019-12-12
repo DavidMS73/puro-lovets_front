@@ -1,4 +1,4 @@
-//import { Author } from '../author/author';
+import { Author } from './author';
 import { Book } from './book';
 import { Review } from './review';
 
@@ -8,7 +8,7 @@ import { Review } from './review';
 */
 export class BookDetail extends Book {
    
-    //authors: Author[];
+    authors: Author[];
     
     reviews: Review[];
 }

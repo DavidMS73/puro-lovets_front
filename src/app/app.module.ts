@@ -11,6 +11,7 @@ import {MatCarouselModule} from '@ngmodule/material-carousel'
 
 import { BookList2Component } from './book/book-list2/book-list2.component';
 import { ToastrModule } from 'ngx-toastr';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ToastrModule } from 'ngx-toastr';
     AuthModule,
     BookModule,
     MatCarouselModule,
+    MatButtonModule,
     ToastrModule.forRoot({
       timeOut: 10000,
       positionClass: 'toast-bottom-right',

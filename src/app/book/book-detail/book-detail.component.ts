@@ -7,6 +7,8 @@ import {Book} from '../book';
 import {BookDetail} from '../book-detail';
 import {BookReviewComponent} from '../book-review/book-review.component';
 import {BookAddReviewComponent} from '../book-add-review/book-add-review.component';
+import { TouchSequence } from 'selenium-webdriver';
+import { Review } from '../review';
 
 @Component({
     selector: 'app-book-detail',
@@ -37,13 +39,18 @@ export class BookDetailComponent implements OnInit, OnDestroy {
                 this.ngOnInit();
             }
         });
+        this.numero=0;
+        this.calificacion=0;
+        this.suma =0;
     }
 
     /**
     * The book's id retrieved from the path
     */
     book_id: number;
-
+    numero : number;
+    calificacion: number;
+    suma:number;
     /**
     * The book whose details are shown
     */
@@ -60,9 +67,39 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     */
     navigationSubscription;
 
-
+    aumentar(): void {
+        this.numero= this.numero +1;
+    }
+    dis(): void {
+        this.numero= this.numero -1;
+    }
    
-
+    estrella (i: number): string{
+        
+        if (i != null)
+         return "../../../assets/"+i+".PNG";
+        else
+        return "../../../assets/0.PNG";
+    }
+    gen (): string{
+        console.log(this.bookDetail);
+        console.log(this.bookDetail.calificacion);
+        this.calificacion = 0;
+        this.suma =0;
+        for (let a of this.bookDetail.reviews)
+        {
+        
+            this.calificacion = this.calificacion + a.calificacion;
+            this.suma = this.suma +1;
+        }
+        if (this.suma != 0)
+             this.calificacion = Math.floor(this.calificacion/this.suma );
+        else
+            this.calificacion = 0;
+        console.log("CAL"+this.calificacion);
+         return "../../../assets/"+this.calificacion+".PNG";
+        
+    }
     toggleReviews(): void {
        
     }
@@ -81,6 +118,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
             .subscribe(bookDetail => {
                 this.bookDetail = bookDetail;
             });
+          console.log(this.bookDetail);
     }
 
     /**
@@ -118,8 +156,9 @@ export class BookDetailComponent implements OnInit, OnDestroy {
        console.log("---");
         this.book_id = +this.route.snapshot.paramMap.get('id');
         this.bookDetail = new BookDetail();
-        //this.getBookDetail();
-        //this.getOtherBooks();
+        this.numero =0;
+        this.getBookDetail();
+        this.getOtherBooks();
     }
 
     /**
