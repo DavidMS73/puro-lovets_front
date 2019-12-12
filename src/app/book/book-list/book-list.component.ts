@@ -22,13 +22,23 @@ export class BookListComponent implements OnInit {
   }
 
   
-  filterBooks() {
-    this.filteredBooks = this.books.filter(book => book.categoria==1);
+  filterBooks(categoria: number) {
+    console.log(categoria);
+    this.filteredBooks = this.books.filter(book =>book.categoria===categoria);
+    console.log(this.filteredBooks);
   }
 
   getBooks(): void {
     console.log("getBooks on init");
-    this.bookService.getBooks().subscribe(books => this.books = books);
+    this.bookService.getBooks().subscribe(books => {
+      this.books = books;
+      this.filteredBooks = this.books;
+      console.log(this.books);
+    });
   } 
+
+  onFiltro(categoria:number) {
+    this.filterBooks(categoria);
+  }
  
 }

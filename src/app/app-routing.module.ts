@@ -9,6 +9,7 @@ import { BookDetailComponent} from './book/book-detail/book-detail.component'
 import { BookNovedadesComponent } from './book/book-novedades/book-novedades.component'
 import { BookPromocionesComponent } from './book/book-promociones/book-promociones.component'
 import { BookList2Component } from './book/book-list2/book-list2.component';
+import { MicarritoComponent } from './auth/micarrito/micarrito.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
           {
               path: 'login',
               component: LoginComponent,
+          },
+          {
+            path: 'micarrito',
+            component: MicarritoComponent,
           },
           {
               path: 'signup',
