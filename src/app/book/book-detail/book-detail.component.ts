@@ -90,12 +90,16 @@ export class BookDetailComponent implements OnInit, OnDestroy {
         {
         
             this.calificacion = this.calificacion + a.calificacion;
+            console.log("holis "+this.calificacion);
             this.suma = this.suma +1;
         }
-        if (this.suma != 0)
+        if (this.suma != 0 )
              this.calificacion = Math.floor(this.calificacion/this.suma );
         else
             this.calificacion = 0;
+        if (this.calificacion == NaN)
+            return "../../../assets/0.PNG";
+        this.numero =0;
         console.log("CAL"+this.calificacion);
          return "../../../assets/"+this.calificacion+".PNG";
         
