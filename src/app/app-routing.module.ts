@@ -4,6 +4,7 @@ import {AppComponent} from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookListComponent} from './book/book-list/book-list.component'
+import { HomeComponent } from './home/home.component';
 import { BookDetailComponent} from './book/book-detail/book-detail.component'
 
 const routes: Routes = [
@@ -22,8 +23,7 @@ const routes: Routes = [
   },
   {
       path: 'home',
-      //component: HomeComponent
-      redirectTo: 'auth'
+      component: HomeComponent
   },
   {
     path: 'libros',
