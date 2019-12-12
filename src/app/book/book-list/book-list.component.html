@@ -21,9 +21,11 @@
                 <a href="libros/{{book.id}}"><img src="{{book.image}}" class="card-img-top" alt="..."></a>
                 <div class="card-body text-center">
                     <p class="card-title font-weight-bold">{{book.name}}</p>
-                    <p class="card-text">{{book.precio}}</p>
-                    <p class="card-text">{{book.descuento}}</p>
-                    <p class="btn btn-info align-text-bottom"><mat-icon>add_shopping_cart</mat-icon></p>
+                    <p class="card-text">${{book.precio}} COP</p>
+                    <p class="card-text">{{book.descuento === 0 ? "" : book.descuento + "%"}}</p>
+                    <div class="card-footer align-text-bottom">
+                        <p class="btn btn-info align-text-bottom"><mat-icon>add_shopping_cart</mat-icon></p>
+                    </div>
                 </div>
             </div>
         </div>
