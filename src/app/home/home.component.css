@@ -3,7 +3,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-},
+}
 .text--blue {
     color: #121a2f!important;
 }
@@ -12,3 +12,43 @@
     font-size: 75px;
     font-weight: 900;
 }
+
+
+ /*#imgcontainer
+{
+opacity:0.1;
+background-color: Black;
+z-index:10;
+}*/
+#banner
+{
+    height: 720px;
+      Z-index: 5;
+}
+
+#imgcontainer {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+  justify-content: center;
+ }
+ #opacitor {
+     height: 100%;
+     width: 100%;
+     opacity: 0.6;
+    position: absolute;
+    z-index: 1000;
+    background-color: black;
+ }
+ #logo {
+     z-index: 1005;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+    width: 30%;
+ }
