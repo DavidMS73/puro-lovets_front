@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         } else {
           this.toastr.warning('El usuario no existe', 'Logging in');
         }
-      }
+      }, error => this.toastr.error(error.message, 'Error')
     );
   }
 
