@@ -1,0 +1,12 @@
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: indigo;
+  }
+
+#login-div{
+    width: 100%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
