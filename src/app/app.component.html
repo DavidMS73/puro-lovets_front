@@ -30,7 +30,7 @@
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink= "/auth/sign-up" routerLinkActive="active">Sign up</a>
+          <a class="nav-link" routerLink= "/auth/signup" routerLinkActive="active">Sign up</a>
         </li>
         
       </ul>
@@ -38,14 +38,10 @@
   </div>
 </nav>
 
-<div>
-  <header class="masthead">
-  </header>
-  </div>
-  
-
-<router-outlet></router-outlet>
-
-
-
-<router-outlet></router-outlet>
+<div class="content-wrap">
+    <div class="row">
+        <div class="col" >
+            <router-outlet ></router-outlet>
+        </div>
+    </div>
+</div>
