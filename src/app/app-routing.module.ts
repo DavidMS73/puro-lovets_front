@@ -6,6 +6,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BookListComponent} from './book/book-list/book-list.component'
 import { HomeComponent } from './home/home.component';
 import { BookDetailComponent} from './book/book-detail/book-detail.component'
+import { BookList2Component } from './book/book-list2/book-list2.component';
 
 const routes: Routes = [
   {

@@ -1,0 +1,15 @@
+<div class = "container-fluid">
+        
+        <div class = "row mx-0">
+            <div class="col" style="display: flex; flex-wrap: wrap;">
+                <div *ngFor="let book of books|slice:0:4; trackBy: trackId" class="card border-0" style="width: 20%; margin: 2%;">
+                    <a href="libros/{{book.id}}"><img src="{{book.image}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body text-center">
+                        <p class="card-title font-weight-bold">{{book.name}}</p>
+                        <p class="card-text">{{book.precio}}</p>
+                        <p class="card-text">{{book.descuento}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
