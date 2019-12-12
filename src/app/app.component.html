@@ -1,7 +1,9 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0000A0" >
+<nav *ngIf="!router.url.includes('home')" class="navbar navbar-expand-lg navbar-dark" style="background-color: #0000A0" >
   <div class="container my-0">
-    <a class="navbar-brand" href="#">Bienvenido</a>
+      <a class="navbar-brand" href="#">
+          <img src="../assets/images/logo2.png" height="30" alt="">
+        </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,10 +16,10 @@
                     <a class="nav-link font-weight-bold" routerLink= "/libros/list" routerLinkActive="active" >Libros</a>
                   </li>
                   <li class="nav-item active">
-                      <a class="nav-link font-weight-bold" href="#">Novedades<span class="sr-only">(current)</span></a>
+                      <a class="nav-link font-weight-bold" routerLink= "/novedades" routerLinkActive="active">Novedades<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                      <a class="nav-link font-weight-bold" href="#">Promociones</a>
+                      <a class="nav-link font-weight-bold" routerLink= "/promociones" routerLinkActive="active">Promociones</a>
                     </li>
             </ul>
           </div>
