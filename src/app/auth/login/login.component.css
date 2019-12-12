@@ -1,0 +1,33 @@
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #0275d8;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: white;
+}
+
+.content-centered{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#user-div {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pass-div {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mat-form-field.mat-form-field{
+    width: 300px;
+}
