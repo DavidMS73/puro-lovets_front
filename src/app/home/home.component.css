@@ -3,7 +3,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-},
+}
 .text--blue {
     color: #121a2f!important;
 }
@@ -29,25 +29,26 @@ z-index:10;
 #imgcontainer {
     width: 100%;
     position: relative;
+    margin: auto;
+    display: flex;
+  justify-content: center;
  }
  #opacitor {
      height: 100%;
      width: 100%;
-     opacity: 0.4;
-    float: left;
+     opacity: 0.6;
     position: absolute;
-    left: 0px;
-    top: 0px;
     z-index: 1000;
     background-color: black;
  }
  #logo {
      z-index: 1005;
-     float: left;
     position: absolute;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    display: block;
+    top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+    width: 30%;
  }
