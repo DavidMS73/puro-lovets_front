@@ -1,4 +1,4 @@
-//import { Editorial } from '../editorial/editorial';
+import { Editorial } from './editorial';
 
 export class Book {
     /**
@@ -35,7 +35,7 @@ export class Book {
     /**
     * The editorial of the book
     */
-    //editorial: Editorial;
+    editorial: Editorial;
 
     descuento: number;
 

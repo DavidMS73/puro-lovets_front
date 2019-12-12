@@ -1,4 +1,5 @@
 import {Book} from "./book";
+import {Usuario} from "../auth/usuario";
 export class Review {
     /**
     * The review's id
@@ -25,5 +26,6 @@ export class Review {
     */
     book: Book;
 
-    //usuario: Usuario;
+    usuario: Usuario;
+    calificacion: number;
 }

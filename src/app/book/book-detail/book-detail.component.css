@@ -1,0 +1,28 @@
+.eye{
+    position:absolute;
+    height:300px;
+    width:200px;
+    top: 10px;
+    left : 40px;
+    z-index: 1;
+    border-image-source: url(https://pisosalemanes.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/9/19456.jpg) 30 round;
+  }
+  .bu{
+    font-size: 20px; 
+  }
+  
+  .heaven
+  {
+    position:absolute;
+    height:300px;
+    width:300px;
+    z-index: -1;
+  }
+  .text{
+    font-weight: 300;
+    font-size: 30px;
+}
+.chiqui{
+    height:20px;
+    width:100px;
+}
