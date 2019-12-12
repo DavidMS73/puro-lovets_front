@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { MatInputModule, MatFormFieldModule, MatIconModule } from '@angular/material';
+import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 
 
@@ -12,7 +12,8 @@ import { MatInputModule, MatFormFieldModule, MatIconModule } from '@angular/mate
     CommonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class AuthModule { }
