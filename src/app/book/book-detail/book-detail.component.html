@@ -1,53 +1,58 @@
 <div class="card mb-12">
   <div class="row no-gutters">
     <div class="col-md-4">
-       
-      <img src="{{bookDetail.image}}" class="card-img eye" alt="..." >
-       
-      
+
+      <img src="{{bookDetail.image}}" class="card-img eye" alt="...">
+
+
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{bookDetail.name}}</h5>
-        <img src={{gen()}} class="card-img chiqui " alt="..." >
+        <img src={{gen()}} class="card-img medioi " alt="...">
         <p class="card-text">
           <!-- <div *ngFor="let author of bookDetail.authors">
             <dd>{{author.name}}</dd>
           </div> -->
         </p>
-        <dt class="card-text">${{bookDetail.precio}}</dt>
+        <dt class="card-text">${{bookDetail.precio}} COP</dt>
+        <p class="card-text">{{book.descuento === 0 ? "" : book.descuento + "%"}}</p>
         <small class="text-muted">
-        <dt> ISBN</dt>
-        <dd>{{bookDetail.isbn}}</dd>
-        <dt >Editorial</dt>
-        <dd>{{bookDetail.editorial.name}}</dd>
-      </small>
-      <div  class="row">
-          <p  class="btn btn-light align-text-bottom" (click)="disminuir()"> -</p>
-        
-        <dt class="align-text bu" > &nbsp;&nbsp;&nbsp;  {{numero}} &nbsp;&nbsp;&nbsp; </dt>
-        <p  class="btn btn-light align-text-bottom" (click)="aumentar()"> +</p>
-   
-        
-        <p class="btn btn-info align-text-bottom"><mat-icon>add_shopping_cart</mat-icon></p>
-    </div>
-        <dt class="card-text" >Description</dt>
+          <dt> ISBN</dt>
+          <dd>{{bookDetail.isbn}}</dd>
+          <dt>Editorial</dt>
+          <dd>{{bookDetail.editorial.name}}</dd>
+        </small>
+        <div class="row">
+          <p class="btn btn-light align-text-bottom" (click)="disminuir()"> -</p>
+
+          <dt class="align-text bu"> &nbsp;&nbsp;&nbsp; {{numero}} &nbsp;&nbsp;&nbsp; </dt>
+          <p class="btn btn-light align-text-bottom" (click)="aumentar()"> +</p>
+
+
+          <p class="btn btn-info align-text-bottom">
+            <mat-icon>add_shopping_cart</mat-icon>
+          </p>
+        </div>
+        <dt class="card-text">Description</dt>
         <dd class="card-text">{{bookDetail.description}}</dd>
       </div>
     </div>
   </div>
 </div>
-<div  class="row">
-<dt class="text"> &nbsp; Reseñas de nuestros lectores</dt>
-<a href="libros/{{book.id}}/ref"> <p  class="btn btn-light align-text-bottom" > + Agregar reseña</p> </a>
+<div class="row">
+  <dt class="text"> &nbsp; Reseñas de nuestros lectores</dt>
+  <a href="libros/{{book.id}}/ref">
+    <p class="btn btn-light align-text-bottom"> + Agregar reseña</p>
+  </a>
 </div>
 
 <div *ngFor="let author of bookDetail.reviews">
   <!--  <img src={{estrella()}} class="card-img eye" alt="..." > -->
-  <img src={{estrella(author.calificacion)}} class="card-img chiqui " alt="..." >
-<dd> {{author.usuario}}</dd>
-<dt> {{author.name}}</dt>
-<dd> {{author.description}} </dd>
+  <img src={{estrella(author.calificacion)}} class="card-img chiqui " alt="...">
+  <dd> {{author.usuario}}</dd>
+  <dt> {{author.name}}</dt>
+  <dd> {{author.description}} </dd>
 </div>
 
 

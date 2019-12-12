@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private authService: AuthService, private toastr: ToastrService, private formBuilder: FormBuilder) {
+  constructor(private authService: AuthService, private toastr: ToastrService, private formBuilder: FormBuilder, private router: Router) {
     this.form = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -27,10 +28,11 @@ export class LoginComponent implements OnInit {
       (result) => {
         if (result !== undefined) {
           this.authService.setLoggedUser(result);
+          this.router.navigate(['/home']);
         } else {
           this.toastr.warning('El usuario no existe', 'Logging in');
         }
-      }
+      }, error => this.toastr.error(error.message, 'Error')
     );
   }
 

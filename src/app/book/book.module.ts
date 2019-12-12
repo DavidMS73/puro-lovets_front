@@ -7,11 +7,13 @@ import { BookAddReviewComponent } from './book-add-review/book-add-review.compon
 import { BookService } from './book.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { BookNovedadesComponent } from './book-novedades/book-novedades.component';
+import { BookPromocionesComponent } from './book-promociones/book-promociones.component';
 
 
 
 @NgModule({
-  declarations: [BookListComponent,  BookDetailComponent, BookReviewComponent, BookAddReviewComponent],
+  declarations: [BookListComponent,  BookDetailComponent, BookReviewComponent, BookAddReviewComponent, BookNovedadesComponent, BookPromocionesComponent],
   imports: [
     CommonModule,
     HttpClientModule,

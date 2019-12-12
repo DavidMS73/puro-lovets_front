@@ -71,7 +71,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
         this.numero= this.numero +1;
     }
     dis(): void {
-        this.numero= this.numero +1;
+        this.numero= this.numero -1;
     }
    
     estrella (i: number): string{
@@ -92,8 +92,11 @@ export class BookDetailComponent implements OnInit, OnDestroy {
             this.calificacion = this.calificacion + a.calificacion;
             this.suma = this.suma +1;
         }
-       this.calificacion = Math.floor(this.calificacion/this.suma );
-       console.log(this.calificacion);
+        if (this.suma != 0)
+             this.calificacion = Math.floor(this.calificacion/this.suma );
+        else
+            this.calificacion = 0;
+        console.log("CAL"+this.calificacion);
          return "../../../assets/"+this.calificacion+".PNG";
         
     }
@@ -153,6 +156,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
        console.log("---");
         this.book_id = +this.route.snapshot.paramMap.get('id');
         this.bookDetail = new BookDetail();
+        this.numero =0;
         this.getBookDetail();
         this.getOtherBooks();
     }
