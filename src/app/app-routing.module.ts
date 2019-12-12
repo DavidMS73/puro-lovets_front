@@ -4,8 +4,12 @@ import {AppComponent} from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookListComponent} from './book/book-list/book-list.component'
+<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 
+=======
+import { BookDetailComponent} from './book/book-detail/book-detail.component'
+>>>>>>> 728ba4b9ddc1ad55c5a2217840b45ff8709da012
 
 const routes: Routes = [
   {
@@ -27,7 +31,17 @@ const routes: Routes = [
   },
   {
     path: 'libros',
-    component: BookListComponent
+    //component: BookListComponent,
+    children: [
+      {
+        path: 'list',
+        component: BookListComponent
+      },
+      {
+          path: ':id',
+          component: BookDetailComponent
+      }
+    ]
   },
   {
       path: '',
