@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
+
+//const btnfilterByC1: HTMLElement = document.getElementById("button-filterByC1");
+//btnfilterByC1.onclick = function() { this.filterBooks();};
 
 @Component({
   selector: 'app-book-list',
@@ -10,6 +13,7 @@ import { BookService } from '../book.service';
 export class BookListComponent implements OnInit {
 
   books: Book[] = [];
+  filteredBooks: Book[] = [];
 
   constructor(private bookService: BookService) { }
 
@@ -17,8 +21,14 @@ export class BookListComponent implements OnInit {
     this.getBooks();
   }
 
+  
+  filterBooks() {
+    this.filteredBooks = this.books.filter(book => book.categoria==1);
+  }
+
   getBooks(): void {
     console.log("getBooks on init");
     this.bookService.getBooks().subscribe(books => this.books = books);
   } 
+ 
 }
